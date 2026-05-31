@@ -13,7 +13,7 @@ export default function Home() {
       setLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/analyze",
+        "https://video-rag-chatbot.onrender.com/analyze",
         {
           method: "POST",
           headers: {
