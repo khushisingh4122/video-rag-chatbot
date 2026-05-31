@@ -143,11 +143,16 @@ export default function Home() {
 
               {result.video_b?.thumbnail && (
                 <img
-                  src={result.video_b.thumbnail}
-                  alt="Video B"
-                  className="w-full rounded-lg mb-4"
-                />
+                src={result.video_b.thumbnail}
+                alt="Video B"
+                className="w-full rounded-lg mb-4"
+                onError={(e) => {
+                  e.currentTarget.src =
+                    "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png";
+                }}
+              />
               )}
+            
 
               <p><strong>Title:</strong> {result.video_b?.title}</p>
               <p><strong>Channel:</strong> {result.video_b?.channel}</p>
